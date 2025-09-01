@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ProtoSprint – Von der Idee zum Prototyp</title>
+  <meta name="description" content="ProtoSprint: Rapid Prototyping und Produktentwicklung in Rekordzeit.">
+  <meta name="theme-color" content="#6366f1">
+  <meta property="og:title" content="ProtoSprint – Prototyping & Produktentwicklung">
+  <meta property="og:description" content="Von der Idee zum Prototyp in Rekordzeit. Rapid Prototyping, Produktentwicklung und agile Innovation.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  <header class="site-header" data-elevated="false">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Startseite">
+        <img src="assets/logo.svg" alt="ProtoSprint Logo" width="36" height="36" decoding="async">
+        <span>ProtoSprint</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Menü umschalten">
+        <span class="bars" aria-hidden="true"></span>
+      </button>
+      <nav id="nav" class="nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="#leistungen">Leistungen</a></li>
+          <li><a href="#referenzen">Referenzen</a></li>
+          <li><a href="#ueber">Über uns</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+          <li class="divider" aria-hidden="true"></li>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><button class="mode-toggle" id="mode-toggle" aria-pressed="false" title="Hell/Dunkel umschalten">🌓</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>Von der <span class="accent">Idee</span> zum Prototyp<br> in Rekordzeit.</h1>
+        <p class="lead">ProtoSprint bringt Ihre Produktideen schnell zum Leben: Rapid Prototyping, agile Entwicklung und klare Ergebnisse.</p>
+        <div class="actions">
+          <a class="btn primary" href="#kontakt">Projekt starten</a>
+          <a class="btn ghost" href="#leistungen">Mehr erfahren</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="leistungen" class="section">
+      <div class="container">
+        <h2>Leistungen</h2>
+        <ul class="feature-grid">
+          <li>
+            <div class="icon">⚡</div>
+            <h3>Rapid Prototyping</h3>
+            <p>Schnelles Erstellen von klickbaren oder physischen Prototypen – um Ideen sofort erlebbar zu machen.</p>
+          </li>
+          <li>
+            <div class="icon">🛠</div>
+            <h3>Produktentwicklung & Design</h3>
+            <p>Von der Konzeption über das Design bis zur technischen Umsetzung – alles aus einer Hand.</p>
+          </li>
+          <li>
+            <div class="icon">🔍</div>
+            <h3>Testing & Iteration</h3>
+            <p>Schnelles Feedback durch Nutzertests und iterative Optimierung für marktreife Lösungen.</p>
+          </li>
+          <li>
+            <div class="icon">🤝</div>
+            <h3>Beratung & Workshops</h3>
+            <p>Gemeinsam entwickeln wir Strategien, Roadmaps und Produktvisionen, die funktionieren.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="referenzen" class="section alt">
+      <div class="container">
+        <h2>Referenzen</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Startup Alpha</h3>
+            <p>Vom MVP zum serienreifen Produkt in nur 6 Monaten.</p>
+          </article>
+          <article class="card">
+            <h3>Industrie Beta</h3>
+            <p>Prototypen für smarte Geräte, getestet und optimiert mit echten Nutzern.</p>
+          </article>
+          <article class="card">
+            <h3>Projekt Gamma</h3>
+            <p>Agile Entwicklung eines neuen IoT-Produkts für den europäischen Markt.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ueber" class="section">
+      <div class="container">
+        <h2>Über ProtoSprint</h2>
+        <p>Wir sind Spezialisten für schnelle, agile Produktentwicklung. Mit interdisziplinärem Team und modernsten Tools bringen wir Ihre Idee in Rekordzeit zum Prototyp – testbar, greifbar, überzeugend.</p>
+      </div>
+    </section>
+
+    <section id="kontakt" class="section alt">
+      <div class="container">
+        <h2>Kontakt</h2>
+        <form id="contact-form" class="contact" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="field half">
+            <label for="email">E-Mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@protosprint.de">
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="field half">
+            <label for="tel">Telefon (optional)</label>
+            <input id="tel" name="tel" type="tel" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="msg">Nachricht</label>
+            <textarea id="msg" name="msg" rows="5" required></textarea>
+            <small class="error" aria-live="polite"></small>
+          </div>
+          <div class="field chk">
+            <input id="consent" name="consent" type="checkbox" required>
+            <label for="consent">Ich stimme zu, dass meine Angaben zur Kontaktaufnahme gespeichert werden.</label>
+          </div>
+          <button class="btn primary" type="submit">Senden</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> ProtoSprint · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/script.js" defer></script>
+</body>
+</html>
