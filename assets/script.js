@@ -17,7 +17,7 @@
    * WICHTIG:
    * Hier deine echte Kontaktadresse eintragen.
    */
-  const CONTACT_EMAIL = 'DEINE-EMAIL@protosprint.de';
+  const CONTACT_EMAIL = 'annette.hinreier@gmail.com';
 
 
   // =======================================================
