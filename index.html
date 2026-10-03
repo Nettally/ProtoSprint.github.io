@@ -3,149 +3,587 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ProtoSprint – Von der Idee zum Prototyp</title>
-  <meta name="description" content="ProtoSprint: Rapid Prototyping und Produktentwicklung in Rekordzeit.">
+
+  <title>ProtoSprint – Ideen entwickeln. Lösungen bauen.</title>
+  <meta name="description" content="ProtoSprint entwickelt und fertigt individuelle Lösungen: Prototypen, 3D-Druck, Lasercutting, Textildruck, Workshops, Technik für Kinder und technische Projektbegleitung.">
+
   <meta name="theme-color" content="#6366f1">
-  <meta property="og:title" content="ProtoSprint – Prototyping & Produktentwicklung">
-  <meta property="og:description" content="Von der Idee zum Prototyp in Rekordzeit. Rapid Prototyping, Produktentwicklung und agile Innovation.">
+
+  <meta property="og:title" content="ProtoSprint – Ideen entwickeln. Lösungen bauen.">
+  <meta property="og:description" content="Von der ersten Idee bis zur greifbaren Lösung: Prototypen, 3D-Druck, Lasercutting, Textildruck, Workshops und technische Projektbegleitung.">
   <meta property="og:type" content="website">
+
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
+
 <body>
+
   <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
+  <!-- HEADER -->
   <header class="site-header" data-elevated="false">
     <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Startseite">
-        <img src="assets/logo.svg" alt="ProtoSprint Logo" width="36" height="36" decoding="async">
+
+      <a class="brand" href="index.html" aria-label="ProtoSprint Startseite">
+        <img
+          src="assets/logo.svg"
+          alt="ProtoSprint Logo"
+          width="36"
+          height="36"
+          decoding="async"
+        >
         <span>ProtoSprint</span>
       </a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Menü umschalten">
+
+      <button
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="nav"
+        aria-label="Menü umschalten"
+      >
         <span class="bars" aria-hidden="true"></span>
       </button>
+
       <nav id="nav" class="nav" aria-label="Hauptnavigation">
         <ul>
           <li><a href="#leistungen">Leistungen</a></li>
-          <li><a href="#referenzen">Referenzen</a></li>
-          <li><a href="#ueber">Über uns</a></li>
+          <li><a href="#problem">Dein Projekt</a></li>
+          <li><a href="#workshops">Workshops</a></li>
+          <li><a href="#ueber">Über ProtoSprint</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
+
           <li class="divider" aria-hidden="true"></li>
+
           <li><a href="impressum.html">Impressum</a></li>
           <li><a href="datenschutz.html">Datenschutz</a></li>
-          <li><button class="mode-toggle" id="mode-toggle" aria-pressed="false" title="Hell/Dunkel umschalten">🌓</button></li>
+
+          <li>
+            <button
+              class="mode-toggle"
+              id="mode-toggle"
+              aria-pressed="false"
+              title="Hell/Dunkel umschalten"
+            >
+              🌓
+            </button>
+          </li>
         </ul>
       </nav>
+
     </div>
   </header>
 
+
   <main id="main">
+
+    <!-- HERO -->
     <section class="hero">
       <div class="container hero-inner">
-        <h1>Von der <span class="accent">Idee</span> zum Prototyp<br> in Rekordzeit.</h1>
-        <p class="lead">ProtoSprint bringt Ihre Produktideen schnell zum Leben: Rapid Prototyping, agile Entwicklung und klare Ergebnisse.</p>
+
+        <p class="eyebrow">ENTWICKELN · BAUEN · AUSPROBIEREN</p>
+
+        <h1>
+          Deine <span class="accent">Idee.</span><br>
+          Dein Problem.<br>
+          Unsere Lösung.
+        </h1>
+
+        <p class="lead">
+          ProtoSprint entwickelt, fertigt und macht Technik erlebbar.
+          Von der ersten Skizze über den Prototyp bis zur praktischen Lösung.
+        </p>
+
         <div class="actions">
-          <a class="btn primary" href="#kontakt">Projekt starten</a>
-          <a class="btn ghost" href="#leistungen">Mehr erfahren</a>
+          <a class="btn primary" href="#kontakt">
+            Projekt beschreiben
+          </a>
+
+          <a class="btn ghost" href="#leistungen">
+            Leistungen entdecken
+          </a>
         </div>
+
       </div>
     </section>
 
+
+    <!-- LEISTUNGEN -->
     <section id="leistungen" class="section">
       <div class="container">
-        <h2>Leistungen</h2>
-        <ul class="feature-grid">
-          <li>
-            <div class="icon">⚡</div>
-            <h3>Rapid Prototyping</h3>
-            <p>Schnelles Erstellen von klickbaren oder physischen Prototypen – um Ideen sofort erlebbar zu machen.</p>
-          </li>
-          <li>
-            <div class="icon">🛠</div>
-            <h3>Produktentwicklung & Design</h3>
-            <p>Von der Konzeption über das Design bis zur technischen Umsetzung – alles aus einer Hand.</p>
-          </li>
-          <li>
-            <div class="icon">🔍</div>
-            <h3>Testing & Iteration</h3>
-            <p>Schnelles Feedback durch Nutzertests und iterative Optimierung für marktreife Lösungen.</p>
-          </li>
-          <li>
-            <div class="icon">🤝</div>
-            <h3>Beratung & Workshops</h3>
-            <p>Gemeinsam entwickeln wir Strategien, Roadmaps und Produktvisionen, die funktionieren.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
 
-    <section id="referenzen" class="section alt">
-      <div class="container">
-        <h2>Referenzen</h2>
-        <div class="cards">
-          <article class="card">
-            <h3>Startup Alpha</h3>
-            <p>Vom MVP zum serienreifen Produkt in nur 6 Monaten.</p>
-          </article>
-          <article class="card">
-            <h3>Industrie Beta</h3>
-            <p>Prototypen für smarte Geräte, getestet und optimiert mit echten Nutzern.</p>
-          </article>
-          <article class="card">
-            <h3>Projekt Gamma</h3>
-            <p>Agile Entwicklung eines neuen IoT-Produkts für den europäischen Markt.</p>
-          </article>
+        <div class="section-intro">
+          <p class="eyebrow">WAS PROTOSPRINT MACHT</p>
+          <h2>Von der Idee bis zur Umsetzung.</h2>
+
+          <p>
+            Nicht jedes Problem braucht eine Lösung von der Stange.
+            ProtoSprint verbindet kreative Ideenfindung, moderne
+            Fertigungsverfahren und praktische Umsetzung.
+          </p>
         </div>
+
+
+        <ul class="feature-grid">
+
+          <li>
+            <div class="icon">🛠️</div>
+
+            <h3>Entwickeln & Fertigen</h3>
+
+            <p>
+              Individuelle Bauteile, Prototypen und Lösungen entwickeln
+              und praktisch umsetzen.
+            </p>
+
+            <ul class="service-list">
+              <li>3D-Druck</li>
+              <li>Lasercutting</li>
+              <li>Konstruktion</li>
+              <li>Prototypenfertigung</li>
+            </ul>
+          </li>
+
+
+          <li>
+            <div class="icon">🎁</div>
+
+            <h3>Bedrucken & Verschenken</h3>
+
+            <p>
+              Individuelle Produkte für Unternehmen, Vereine,
+              Veranstaltungen oder als persönliches Geschenk.
+            </p>
+
+            <ul class="service-list">
+              <li>Textil- & T-Shirt-Druck</li>
+              <li>Personalisierte Produkte</li>
+              <li>Honig-Geschenke</li>
+              <li>Kleine individuelle Serien</li>
+            </ul>
+          </li>
+
+
+          <li>
+            <div class="icon">☀️</div>
+
+            <h3>Bauen & Begleiten</h3>
+
+            <p>
+              Technische Begleitung und Dokumentation bei Bau-,
+              Sanierungs- und Photovoltaikprojekten.
+            </p>
+
+            <ul class="service-list">
+              <li>Photovoltaik</li>
+              <li>Sanierung</li>
+              <li>Dokumentation</li>
+              <li>Technische Projektbegleitung</li>
+            </ul>
+          </li>
+
+
+          <li>
+            <div class="icon">💡</div>
+
+            <h3>Lernen & Entdecken</h3>
+
+            <p>
+              Technik verstehen, Ideen entwickeln und gemeinsam
+              Neues ausprobieren.
+            </p>
+
+            <ul class="service-list">
+              <li>Technik für Kinder</li>
+              <li>Papier-Prototyping</li>
+              <li>Kreativworkshops</li>
+              <li>Teambuilding</li>
+            </ul>
+          </li>
+
+        </ul>
+
       </div>
     </section>
 
-    <section id="ueber" class="section">
+
+    <!-- PROBLEM / KERNANGEBOT -->
+    <section id="problem" class="section alt problem-section">
       <div class="container">
-        <h2>Über ProtoSprint</h2>
-        <p>Wir sind Spezialisten für effiziente, agile Produktentwicklung. Mit interdisziplinärem Team und modernsten Tools bringen wir Ihre Idee in Rekordzeit zum Prototyp – testbar, greifbar, überzeugend.</p>
+
+        <div class="problem-box">
+
+          <p class="eyebrow">PROTOTYPEN & SONDERLÖSUNGEN</p>
+
+          <h2>
+            „Ich brauche etwas,<br>
+            das es so nicht gibt.“
+          </h2>
+
+          <p class="problem-lead">
+            Perfekt. Genau da beginnt ProtoSprint.
+          </p>
+
+          <p>
+            Du hast eine Idee im Kopf, aber weißt noch nicht,
+            wie du sie umsetzen kannst?
+          </p>
+
+          <p>
+            Ein Teil ist kaputt und nicht mehr erhältlich?
+            Du brauchst eine spezielle Halterung, ein Gehäuse,
+            ein Modell, eine Schablone oder einen ersten Prototyp?
+          </p>
+
+          <p>
+            Beschreib einfach dein Problem. Gemeinsam finden wir heraus,
+            wie eine Lösung aussehen kann und welches Verfahren dafür
+            geeignet ist.
+          </p>
+
+          <p class="problem-methods">
+            Skizze → Konzept → Konstruktion → Prototyp → Test → Lösung
+          </p>
+
+          <div class="actions">
+            <a class="btn primary" href="#kontakt">
+              Mein Problem beschreiben
+            </a>
+          </div>
+
+        </div>
+
       </div>
     </section>
 
-    <section id="kontakt" class="section alt">
+
+    <!-- FERTIGUNG -->
+    <section id="fertigung" class="section">
       <div class="container">
-        <h2>Kontakt</h2>
+
+        <div class="section-intro">
+          <p class="eyebrow">MACHEN STATT NUR REDEN</p>
+          <h2>Werkzeuge für deine Idee.</h2>
+
+          <p>
+            Je nach Aufgabe kommen unterschiedliche Verfahren zum Einsatz.
+            Entscheidend ist nicht die Maschine – sondern dass am Ende
+            eine Lösung entsteht, die funktioniert.
+          </p>
+        </div>
+
+
+        <div class="cards">
+
+          <article class="card">
+            <div class="icon">🧩</div>
+            <h3>3D-Druck</h3>
+            <p>
+              Prototypen, Ersatzteile, Halterungen, Gehäuse,
+              Modelle und individuelle Bauteile.
+            </p>
+          </article>
+
+
+          <article class="card">
+            <div class="icon">✨</div>
+            <h3>Lasercutting</h3>
+            <p>
+              Schneiden, gravieren und personalisieren – für Modelle,
+              Schilder, Schablonen, Geschenke und Prototypen.
+            </p>
+          </article>
+
+
+          <article class="card">
+            <div class="icon">👕</div>
+            <h3>Textildruck</h3>
+            <p>
+              Individuelle T-Shirts und Textilien für Teams,
+              Vereine, Veranstaltungen, Firmen oder private Projekte.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- WORKSHOPS -->
+    <section id="workshops" class="section alt">
+      <div class="container">
+
+        <div class="section-intro">
+          <p class="eyebrow">TECHNIK & KREATIVITÄT ERLEBEN</p>
+          <h2>Ausprobieren. Verstehen. Gemeinsam entwickeln.</h2>
+        </div>
+
+
+        <div class="cards workshop-grid">
+
+          <article class="card">
+            <div class="icon">🧒</div>
+
+            <h3>Technik erleben für Kinder</h3>
+
+            <p>
+              Spielerisches Entdecken für Kinder von 3 bis 6 Jahren:
+              ausprobieren, bauen, beobachten und verstehen.
+            </p>
+
+            <p>
+              Technik wird nicht erklärt, sondern gemeinsam erlebt.
+            </p>
+          </article>
+
+
+          <article class="card">
+            <div class="icon">✂️</div>
+
+            <h3>Papier-Prototyping</h3>
+
+            <p>
+              Mit Papier, Stift und einfachen Materialien werden
+              Ideen innerhalb kürzester Zeit sichtbar und diskutierbar.
+            </p>
+
+            <p>
+              Ideal für kreative Ideenfindung, Workshops und Teams.
+            </p>
+          </article>
+
+
+          <article class="card">
+            <div class="icon">🤝</div>
+
+            <h3>Teambuilding</h3>
+
+            <p>
+              Gemeinsam Probleme lösen, Ideen entwickeln und
+              daraus einen ersten Prototyp bauen.
+            </p>
+
+            <p>
+              Praktisch, kreativ und mit einem greifbaren Ergebnis.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- HONIG -->
+    <section id="geschenke" class="section">
+      <div class="container">
+
+        <div class="gift-box">
+
+          <div class="gift-content">
+
+            <p class="eyebrow">ETWAS BESONDERES</p>
+
+            <h2>Honig trifft Hightech.</h2>
+
+            <p>
+              Ein persönliches Geschenk darf auch ungewöhnlich sein.
+              ProtoSprint verbindet Honig mit individueller Gestaltung
+              und moderner Fertigung.
+            </p>
+
+            <p>
+              Zum Beispiel als Geschenk für Kunden, Mitarbeitende,
+              Veranstaltungen oder besondere Anlässe.
+            </p>
+
+            <div class="tags">
+              <span>Honig</span>
+              <span>Gravur</span>
+              <span>Personalisierung</span>
+              <span>Geschenkideen</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ÜBER -->
+    <section id="ueber" class="section alt">
+      <div class="container">
+
+        <div class="section-intro">
+
+          <p class="eyebrow">ÜBER PROTOSPRINT</p>
+
+          <h2>Tüfteln, ausprobieren, besser machen.</h2>
+
+          <p>
+            ProtoSprint steht für die Freude daran, aus einer Idee
+            etwas Greifbares zu machen.
+          </p>
+
+          <p>
+            Im Mittelpunkt stehen Probleme, für die es noch keine
+            fertige Lösung gibt. Dabei verbindet ProtoSprint
+            technisches Verständnis, kreative Ideenfindung und
+            moderne Fertigung.
+          </p>
+
+          <p>
+            Manchmal beginnt die Lösung mit einem Blatt Papier.
+            Manchmal mit einem 3D-Modell. Und manchmal damit,
+            zuerst die richtige Frage zu stellen.
+          </p>
+
+          <p>
+            <strong>
+              Entscheidend ist nicht die Maschine –
+              sondern dass am Ende etwas funktioniert.
+            </strong>
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- KONTAKT -->
+    <section id="kontakt" class="section">
+      <div class="container">
+
+        <div class="section-intro">
+          <p class="eyebrow">DEIN PROJEKT</p>
+
+          <h2>Was möchtest du umsetzen?</h2>
+
+          <p>
+            Eine grobe Idee reicht für den Anfang völlig aus.
+            Beschreib kurz dein Problem, deine Idee oder dein Projekt.
+          </p>
+        </div>
+
+
         <form id="contact-form" class="contact" novalidate>
+
           <div class="field">
             <label for="name">Name</label>
-            <input id="name" name="name" type="text" autocomplete="name" required>
+
+            <input
+              id="name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              required
+            >
+
             <small class="error" aria-live="polite"></small>
           </div>
+
+
           <div class="field half">
             <label for="email">E-Mail</label>
-            <input id="email" name="email" type="email" autocomplete="email" required placeholder="you@protosprint.de">
+
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+              placeholder="deine@email.de"
+            >
+
             <small class="error" aria-live="polite"></small>
           </div>
+
+
           <div class="field half">
             <label for="tel">Telefon (optional)</label>
-            <input id="tel" name="tel" type="tel" autocomplete="tel">
+
+            <input
+              id="tel"
+              name="tel"
+              type="tel"
+              autocomplete="tel"
+            >
           </div>
+
+
           <div class="field">
-            <label for="msg">Nachricht</label>
-            <textarea id="msg" name="msg" rows="5" required></textarea>
+            <label for="msg">
+              Beschreib dein Projekt oder Problem
+            </label>
+
+            <textarea
+              id="msg"
+              name="msg"
+              rows="6"
+              required
+              placeholder="Was möchtest du bauen, lösen oder ausprobieren?"
+            ></textarea>
+
             <small class="error" aria-live="polite"></small>
           </div>
+
+
           <div class="field chk">
-            <input id="consent" name="consent" type="checkbox" required>
-            <label for="consent">Ich stimme zu, dass meine Angaben zur Kontaktaufnahme gespeichert werden.</label>
+
+            <input
+              id="consent"
+              name="consent"
+              type="checkbox"
+              required
+            >
+
+            <label for="consent">
+              Ich stimme zu, dass meine Angaben zur Kontaktaufnahme
+              gespeichert und verarbeitet werden.
+            </label>
+
           </div>
-          <button class="btn primary" type="submit">Senden</button>
-          <p class="form-status" role="status" aria-live="polite"></p>
+
+
+          <button class="btn primary" type="submit">
+            Anfrage senden
+          </button>
+
+          <p
+            class="form-status"
+            role="status"
+            aria-live="polite"
+          ></p>
+
         </form>
+
       </div>
     </section>
+
   </main>
 
+
+  <!-- FOOTER -->
   <footer class="site-footer">
+
     <div class="container">
-      <p>© <span id="year"></span> ProtoSprint · <a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></p>
+
+      <p>
+        © <span id="year"></span> ProtoSprint ·
+        <a href="impressum.html">Impressum</a> ·
+        <a href="datenschutz.html">Datenschutz</a>
+      </p>
+
     </div>
+
   </footer>
 
+
   <script src="assets/script.js" defer></script>
+
 </body>
 </html>
