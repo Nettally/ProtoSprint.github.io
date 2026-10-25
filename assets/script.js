@@ -324,7 +324,7 @@
           status.textContent =
             consent
               ? 'Bitte prüfe deine Eingaben.'
-              : 'Bitte bestätige noch die Datenschutzhinweise.';
+              : 'Bitte bestätige, dass du die Datenschutzhinweise zur Kenntnis genommen hast.';
 
         }
 
