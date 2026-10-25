@@ -215,20 +215,21 @@
         form.querySelector('.form-status');
 
 
-      const name =
-        form.name.value.trim();
+      
+const name =
+  form.querySelector('#name').value.trim();
 
-      const email =
-        form.email.value.trim();
+const email =
+  form.querySelector('#email').value.trim();
 
-      const tel =
-        form.tel.value.trim();
+const tel =
+  form.querySelector('#tel').value.trim();
 
-      const msg =
-        form.msg.value.trim();
+const msg =
+  form.querySelector('#msg').value.trim();
 
-      const consent =
-        form.consent.checked;
+const consent =
+  form.querySelector('#consent').checked;
 
 
       let valid = true;
