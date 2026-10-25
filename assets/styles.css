@@ -1205,6 +1205,53 @@ input[type="checkbox"] {
   --shadow: rgba(2, 8, 23, 0.65);
 }
 
+/* Ergänzung*/
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  overflow: hidden;
+  border-radius: 1rem;
+  background: #111832;
+  color: #ffffff;
+  padding-bottom: 1rem;
+}
+
+.project-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  margin: 1rem 1rem 0.3rem;
+}
+
+.project-card p {
+  margin: 0 1rem;
+  color: #b8bfd6;
+}
+
+@media (max-width: 900px) {
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
 
 /* =========================================================
    REDUZIERTE ANIMATIONEN
