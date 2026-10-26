@@ -1,13 +1,14 @@
 
 /* =========================================================
    ProtoSprint
-   Navigation + Dark Mode + Kontaktformular
+   Navigation + Dark Mode + Form.taxi-Kontaktformular
    ========================================================= */
 
 (function () {
   'use strict';
 
   const CONTACT_EMAIL = 'protosprint.de@gmail.com';
+  const FORM_ENDPOINT = 'https://form.taxi/s/bbzhfi6k';
   const THEME_KEY = 'theme-preference';
 
   const header = document.querySelector('.site-header');
@@ -97,7 +98,7 @@
     try {
       window.localStorage.setItem(THEME_KEY, theme);
     } catch (error) {
-      // Darstellung funktioniert auch ohne Speicherung.
+      // Theme funktioniert auch ohne Speicherung.
     }
   }
 
@@ -111,24 +112,19 @@
     );
 
     if (modeBtn) {
+      const isDark = selectedTheme === 'dark';
+
       modeBtn.setAttribute(
         'aria-pressed',
-        String(selectedTheme === 'dark')
+        String(isDark)
       );
 
-      modeBtn.setAttribute(
-        'title',
-        selectedTheme === 'dark'
-          ? 'Zum hellen Modus wechseln'
-          : 'Zum dunklen Modus wechseln'
-      );
+      const description = isDark
+        ? 'Zum hellen Modus wechseln'
+        : 'Zum dunklen Modus wechseln';
 
-      modeBtn.setAttribute(
-        'aria-label',
-        selectedTheme === 'dark'
-          ? 'Zum hellen Modus wechseln'
-          : 'Zum dunklen Modus wechseln'
-      );
+      modeBtn.setAttribute('title', description);
+      modeBtn.setAttribute('aria-label', description);
     }
   }
 
@@ -186,7 +182,7 @@
   }
 
   // =======================================================
-  // KONTAKTFORMULAR
+  // KONTAKTFORMULAR MIT FORM.TAXI
   // =======================================================
 
   const form = document.getElementById('contact-form');
@@ -198,6 +194,15 @@
     const msgInput = form.querySelector('#msg');
     const consentInput = form.querySelector('#consent');
     const status = form.querySelector('.form-status');
+    const submitButton = form.querySelector(
+      'button[type="submit"]'
+    );
+
+    function showStatus(message) {
+      if (status) {
+        status.textContent = message;
+      }
+    }
 
     function setError(fieldId, message) {
       const input = form.querySelector('#' + fieldId);
@@ -205,24 +210,21 @@
       if (!input) return;
 
       const field = input.closest('.field');
-
-      if (!field) return;
-
-      const error = field.querySelector('.error');
+      const error = field
+        ? field.querySelector('.error')
+        : null;
 
       if (error) {
         error.textContent = message || '';
       }
 
-      if (fieldId !== 'consent') {
-        input.setAttribute(
-          'aria-invalid',
-          String(Boolean(message))
-        );
-      }
+      input.setAttribute(
+        'aria-invalid',
+        String(Boolean(message))
+      );
     }
 
-    form.addEventListener('submit', function (event) {
+    form.addEventListener('submit', async function (event) {
       event.preventDefault();
 
       if (
@@ -232,120 +234,137 @@
         !msgInput ||
         !consentInput
       ) {
-        if (status) {
-          status.textContent =
-            'Das Formular konnte nicht verarbeitet werden. ' +
-            'Bitte schreibe direkt an ' + CONTACT_EMAIL + '.';
-        }
+        showStatus(
+          'Das Formular ist derzeit nicht verfügbar. ' +
+          'Bitte schreibe an ' + CONTACT_EMAIL + '.'
+        );
+        return;
+      }
 
+      if (submitButton && submitButton.disabled) {
         return;
       }
 
       const name = nameInput.value.trim();
       const email = emailInput.value.trim();
-      const tel = telInput.value.trim();
       const msg = msgInput.value.trim();
       const consent = consentInput.checked;
 
-      let valid = true;
+      let firstInvalid = null;
 
       setError('name', '');
       setError('email', '');
       setError('msg', '');
-
-      if (status) {
-        status.textContent = '';
-      }
+      setError('consent', '');
+      showStatus('');
 
       if (!name) {
-        valid = false;
-
-        setError(
-          'name',
-          'Bitte gib deinen Namen ein.'
-        );
+        setError('name', 'Bitte gib deinen Namen ein.');
+        firstInvalid = firstInvalid || nameInput;
       }
 
       const emailOk =
         /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
       if (!emailOk) {
-        valid = false;
-
         setError(
           'email',
           'Bitte gib eine gültige E-Mail-Adresse ein.'
         );
+        firstInvalid = firstInvalid || emailInput;
       }
 
       if (!msg) {
-        valid = false;
-
         setError(
           'msg',
           'Bitte beschreib kurz dein Projekt oder Problem.'
         );
+        firstInvalid = firstInvalid || msgInput;
       }
 
       if (!consent) {
-        valid = false;
+        setError(
+          'consent',
+          'Bitte bestätige die Kenntnisnahme.'
+        );
+        firstInvalid = firstInvalid || consentInput;
       }
 
-      if (!valid) {
-        if (status) {
-          status.textContent = !consent
-            ? 'Bitte bestätige, dass du die ' +
-              'Datenschutzhinweise zur Kenntnis genommen hast.'
-            : 'Bitte prüfe deine Eingaben.';
-        }
-
+      if (firstInvalid) {
+        showStatus(
+          'Bitte prüfe deine Eingaben und die Datenschutzhinweise.'
+        );
+        firstInvalid.focus();
         return;
       }
 
-      // ===================================================
-      // E-MAIL VORBEREITEN
-      // ===================================================
+      const originalButtonText = submitButton
+        ? submitButton.textContent
+        : '';
 
-      const subject = encodeURIComponent(
-        'ProtoSprint Anfrage – ' + name
-      );
-
-      const messageBody = [
-        'Neue Anfrage über ProtoSprint.de',
-        '',
-        'Name:',
-        name,
-        '',
-        'E-Mail:',
-        email,
-        '',
-        'Telefon:',
-        tel || 'nicht angegeben',
-        '',
-        'Projekt / Problem:',
-        msg,
-        '',
-        '---',
-        'Anfrage erstellt über ProtoSprint.de'
-      ].join('\n');
-
-      const body = encodeURIComponent(messageBody);
-
-      const mailto =
-        'mailto:' + CONTACT_EMAIL +
-        '?subject=' + subject +
-        '&body=' + body;
-
-      if (status) {
-        status.textContent =
-          'Dein E-Mail-Programm wird geöffnet. ' +
-          'Bitte sende die vorbereitete Nachricht ' +
-          'anschließend selbst ab.';
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = 'Wird gesendet ...';
       }
 
-      // Kein automatischer Versand.
-      // Das E-Mail-Programm des Besuchers wird geöffnet.
-      window.location.href = mailto;
+      showStatus('Deine Anfrage wird übertragen ...');
+
+      try {
+        const formData = new FormData(form);
+
+        // Keine zusätzliche Consent-Information versenden.
+        formData.delete('consent');
+
+        const response = await fetch(FORM_ENDPOINT, {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json'
+          },
+          body: formData
+        });
+
+        let result = null;
+
+        try {
+          result = await response.json();
+        } catch (error) {
+          throw new Error('invalid_response');
+        }
+
+        if (
+          !response.ok ||
+          !result ||
+          result.success !== true
+        ) {
+          throw new Error('submission_failed');
+        }
+
+        form.reset();
+
+        setError('name', '');
+        setError('email', '');
+        setError('msg', '');
+        setError('consent', '');
+
+        showStatus(
+          'Vielen Dank! Deine Anfrage wurde erfolgreich ' +
+          'übermittelt. Ich melde mich so bald wie möglich.'
+        );
+
+      } catch (error) {
+        showStatus(
+          'Die Übermittlung konnte nicht bestätigt werden. ' +
+          'Bitte prüfe im Zweifel, ob die Anfrage angekommen ist, ' +
+          'bevor du sie erneut sendest. ' +
+          'Alternativ erreichst du mich unter ' +
+          CONTACT_EMAIL + '.'
+        );
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = originalButtonText;
+        }
+      }
     });
   }
 
@@ -373,13 +392,14 @@
 
         event.preventDefault();
 
+        const reducedMotion =
+          window.matchMedia &&
+          window.matchMedia(
+            '(prefers-reduced-motion: reduce)'
+          ).matches;
+
         target.scrollIntoView({
-          behavior: window.matchMedia &&
-            window.matchMedia(
-              '(prefers-reduced-motion: reduce)'
-            ).matches
-              ? 'auto'
-              : 'smooth',
+          behavior: reducedMotion ? 'auto' : 'smooth',
           block: 'start'
         });
 
