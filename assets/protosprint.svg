@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="654" height="610" viewBox="0 0 654 610" role="img" aria-labelledby="title desc">
+  <title id="title">ProtoSprint Einhorn-Logo</title>
+  <desc id="desc">Vereinfachtes hellblaues P mit schwarzem Einhorn und geschwungenem S. Reine Vektorpfade auf transparentem Hintergrund.</desc>
+  <!-- P silhouette -->
+  <path fill="#00BFFF" d="M80 57H363C478 57 562 139 562 251C562 359 490 438 383 447C381 512 340 570 273 590H80Z"/>
+  <!-- Unicorn and S, a single continuous silhouette -->
+  <path fill="#050C14" d="M239 590C263 566 278 540 278 509C278 454 246 422 179 380C134 352 111 316 111 273C111 206 166 157 239 157C257 157 273 159 286 164L322 123L316 168L430 97L341 196L431 324C439 336 440 348 433 359C426 372 411 375 397 368C373 354 366 337 341 324C316 311 288 309 262 299C235 289 221 276 221 256C221 229 232 207 250 191C207 200 181 232 181 269C181 310 209 335 259 368C311 403 332 436 332 478C332 524 313 564 273 590Z"/>
+  <!-- Eye -->
+  <path fill="#00BFFF" d="M314 222L340 235L354 258L325 250Z"/>
+</svg>
