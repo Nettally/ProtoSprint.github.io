@@ -36,7 +36,18 @@
 
       <nav id="nav" class="nav" aria-label="Hauptnavigation">
         <ul>
-          <li><a href="index.html#leistungen">Leistungen</a></li>
+          <li>
+            <details class="services-dropdown">
+              <summary>Leistungen <span aria-hidden="true">⌄</span></summary>
+              <ul class="services-submenu">
+                  <li><a href="index.html#leistungen">Alle Leistungen</a></li>
+                  <li><a href="entwickeln-fertigen.html">🛠️ Entwickeln &amp; Fertigen</a></li>
+                  <li><a href="bedrucken-verschenken.html">🎁 Bedrucken &amp; Verschenken</a></li>
+                  <li><a href="bauen-begleiten.html">🚀 Beraten &amp; Begleiten</a></li>
+                  <li><a href="lernen-entdecken.html">💡 Lernen &amp; Entdecken</a></li>
+              </ul>
+            </details>
+          </li>
           <li><a href="index.html#problem">Dein Projekt</a></li>
           <!--<li><a href="index.html#workshops">Workshops</a></li>-->
           <li><a href="index.html#ueber">Über ProtoSprint</a></li>
@@ -76,7 +87,11 @@
             <p class="lead">Bei Bau-, Sanierungs- und Photovoltaikprojekten hilft ein strukturierter Blick auf die technischen Fragen. ProtoSprint unterstützt mit technischer Projektbegleitung und Dokumentation.</p>
             <a class="btn primary" href="index.html#kontakt">Projekt besprechen <span aria-hidden="true">↗</span></a>
           </div>
-          <img class="service-detail-image" src="assets/projekt-photovoltaik.jpg" alt="Projektbeispiel: Beraten &amp; Begleiten" width="900" height="675">
+          <div class="service-project-gallery" role="group" aria-label="Drei Projektbeispiele">
+            <figure><img src="assets/projekt-photovoltaik.png" alt="Photovoltaikanlage auf einem Hausdach" decoding="async"><figcaption>Photovoltaik</figcaption></figure>
+            <figure><img src="assets/Beraten.png" alt="Gemeinsame Beratung und technische Projektplanung" decoding="async"><figcaption>Technische Beratung</figcaption></figure>
+            <figure><img src="assets/Hands-on-Coaching.jpg" alt="Gemeinsame technische Arbeit an einem Prototyp" decoding="async"><figcaption>Praktische Begleitung</figcaption></figure>
+          </div>
         </div>
       </div>
     </section>

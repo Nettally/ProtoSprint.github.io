@@ -43,6 +43,7 @@
     if (!nav) return;
 
     nav.classList.remove('open');
+    nav.querySelectorAll('.services-dropdown').forEach(function (dropdown) { dropdown.open = false; });
 
     if (navToggle) {
       navToggle.setAttribute('aria-expanded', 'false');
@@ -76,6 +77,24 @@
         navToggle.focus();
       }
     }
+  });
+
+  // Leistungsnavigation: native Disclosure mit Tastatur- und Außenklick-Verhalten.
+  document.querySelectorAll('.services-dropdown').forEach(function (dropdown) {
+    const summary = dropdown.querySelector('summary');
+    document.addEventListener('click', function (event) {
+      if (!dropdown.contains(event.target)) dropdown.open = false;
+    });
+    dropdown.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && dropdown.open) {
+        event.stopPropagation();
+        dropdown.open = false;
+        summary.focus();
+      }
+    });
+    dropdown.addEventListener('focusout', function (event) {
+      if (!dropdown.contains(event.relatedTarget)) dropdown.open = false;
+    });
   });
 
   // =======================================================

@@ -36,7 +36,18 @@
 
       <nav id="nav" class="nav" aria-label="Hauptnavigation">
         <ul>
-          <li><a href="index.html#leistungen">Leistungen</a></li>
+          <li>
+            <details class="services-dropdown">
+              <summary>Leistungen <span aria-hidden="true">⌄</span></summary>
+              <ul class="services-submenu">
+                  <li><a href="index.html#leistungen">Alle Leistungen</a></li>
+                  <li><a href="entwickeln-fertigen.html">🛠️ Entwickeln &amp; Fertigen</a></li>
+                  <li><a href="bedrucken-verschenken.html">🎁 Bedrucken &amp; Verschenken</a></li>
+                  <li><a href="bauen-begleiten.html">🚀 Beraten &amp; Begleiten</a></li>
+                  <li><a href="lernen-entdecken.html">💡 Lernen &amp; Entdecken</a></li>
+              </ul>
+            </details>
+          </li>
           <li><a href="index.html#problem">Dein Projekt</a></li>
           <!--<li><a href="index.html#workshops">Workshops</a></li>-->
           <li><a href="index.html#ueber">Über ProtoSprint</a></li>
@@ -76,7 +87,11 @@
             <p class="lead">Technik und Kreativität werden greifbar, wenn wir selbst ausprobieren. Gemeinsam entwickeln wir Ideen, bauen einfache Modelle und entdecken neue Lösungswege.</p>
             <a class="btn primary" href="index.html#kontakt">Projekt besprechen <span aria-hidden="true">↗</span></a>
           </div>
-          <img class="service-detail-image" src="assets/projekt-technik-entdecken.jpg" alt="Projektbeispiel: Lernen &amp; Entdecken" width="900" height="675">
+          <div class="service-project-gallery" role="group" aria-label="Drei Projektbeispiele">
+            <figure><img src="assets/Kinder.jpg" alt="Kinder bauen gemeinsam einen Greifarm aus Pappe" decoding="async"><figcaption>Kreativ bauen</figcaption></figure>
+            <figure><img src="assets/projekt-technik-entdecken.jpg" alt="Spielerisches Entdecken von Technik an einem Spielzeugauto" decoding="async"><figcaption>Technik entdecken</figcaption></figure>
+            <figure><img src="assets/Hands-on-Coaching.jpg" alt="Erwachsene arbeiten gemeinsam an einem fahrbaren Prototyp" decoding="async"><figcaption>Gemeinsam tüfteln</figcaption></figure>
+          </div>
         </div>
       </div>
     </section>

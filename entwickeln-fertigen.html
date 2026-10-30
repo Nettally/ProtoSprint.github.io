@@ -36,7 +36,18 @@
 
       <nav id="nav" class="nav" aria-label="Hauptnavigation">
         <ul>
-          <li><a href="index.html#leistungen">Leistungen</a></li>
+          <li>
+            <details class="services-dropdown">
+              <summary>Leistungen <span aria-hidden="true">⌄</span></summary>
+              <ul class="services-submenu">
+                  <li><a href="index.html#leistungen">Alle Leistungen</a></li>
+                  <li><a href="entwickeln-fertigen.html">🛠️ Entwickeln &amp; Fertigen</a></li>
+                  <li><a href="bedrucken-verschenken.html">🎁 Bedrucken &amp; Verschenken</a></li>
+                  <li><a href="bauen-begleiten.html">🚀 Beraten &amp; Begleiten</a></li>
+                  <li><a href="lernen-entdecken.html">💡 Lernen &amp; Entdecken</a></li>
+              </ul>
+            </details>
+          </li>
           <li><a href="index.html#problem">Dein Projekt</a></li>
           <!--<li><a href="index.html#workshops">Workshops</a></li>-->
           <li><a href="index.html#ueber">Über ProtoSprint</a></li>
@@ -76,7 +87,11 @@
             <p class="lead">Individuelle Bauteile, Prototypen und Sonderanfertigungen entstehen aus deiner Idee, Skizze oder einem konkreten Problem. Gemeinsam klären wir, welches Verfahren zu deinem Vorhaben passt.</p>
             <a class="btn primary" href="index.html#kontakt">Projekt besprechen <span aria-hidden="true">↗</span></a>
           </div>
-          <img class="service-detail-image" src="assets/projekt-lasercutting.jpg" alt="Projektbeispiel: Entwickeln &amp; Fertigen" width="900" height="675">
+          <div class="service-project-gallery" role="group" aria-label="Drei Projektbeispiele">
+            <figure><img src="assets/projekt-lasercutting.jpg" alt="Individuell gravierte Holzscheibe" decoding="async"><figcaption>Lasergravur</figcaption></figure>
+            <figure><img src="assets/3D-Stern.png" alt="Stern als Beispiel eines 3D-Drucks" decoding="async"><figcaption>3D-Druck</figcaption></figure>
+            <figure><img src="assets/Hands-on-Coaching.jpg" alt="Gemeinsame Arbeit an einem fahrbaren Prototyp" decoding="async"><figcaption>Prototypen entwickeln</figcaption></figure>
+          </div>
         </div>
       </div>
     </section>
