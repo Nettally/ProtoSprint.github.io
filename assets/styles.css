@@ -1638,9 +1638,8 @@ input[type="checkbox"] {
   .services-dropdown summary { padding: .75rem .8rem; justify-content: space-between; }
 }
 
-/* Detailseiten: Einleitung oben, je ein Projekt mit Bild in den Kacheln. */
-.service-detail-intro { max-width: 850px; }
-.service-detail-intro h1 {
+/* Detailseiten: Kategorie und drei Projektkacheln mit Bild oben. */
+#project-examples-title {
   font-size: clamp(2.2rem, 5vw, 4rem);
   line-height: 1.1;
   text-wrap: balance;
@@ -1650,8 +1649,8 @@ input[type="checkbox"] {
 .project-story { display: flex; flex-direction: column; padding: 0; overflow: hidden; }
 .project-story-copy { padding: 1.6rem; }
 .project-story-copy .eyebrow { font-size: .7rem; }
-.project-story h3 { font-size: 1.35rem; line-height: 1.3; margin: 0 0 1.25rem; }
+.project-story h2 { font-size: 1.35rem; line-height: 1.3; margin: 0 0 1.25rem; }
 .project-story p { line-height: 1.7; }
 .project-story strong { color: var(--text); }
-.project-story figure { margin: auto 0 0; }
+.project-story figure { margin: 0; }
 .project-story img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
