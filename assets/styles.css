@@ -1358,3 +1358,146 @@ input[type="checkbox"] {
     animation-iteration-count: 1 !important;
   }
 }
+
+/* =========================================================
+   PROTOSPRINT – CINEMATIC HERO
+   Ganz am Ende von assets/styles.css einfügen.
+   Wirkt bewusst nur auf .hero-cinematic.
+   ========================================================= */
+.hero.hero-cinematic {
+  isolation: isolate;
+  min-height: min(780px, 90svh);
+  display: flex;
+  align-items: center;
+  padding: clamp(5rem, 10vw, 8rem) 0;
+  color: #f5fbff;
+  background: #050c17;
+}
+.hero.hero-cinematic::after { display: none; }
+.hero-cinematic .hero-atmosphere {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 36% 55% at 75% 48%, rgba(0, 194, 255, .28), transparent 80%),
+    radial-gradient(ellipse 32% 38% at 95% 20%, rgba(0, 108, 255, .18), transparent 80%),
+    radial-gradient(ellipse 36% 34% at 18% 90%, rgba(8, 86, 170, .13), transparent 80%),
+    linear-gradient(120deg, #050b15 12%, #0a1729 54%, #040b15 100%);
+}
+.hero-cinematic .hero-atmosphere::before,
+.hero-cinematic .hero-atmosphere::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: .45;
+  background: radial-gradient(ellipse 30% 24% at 70% 35%, rgba(135, 217, 255, .22), transparent 85%);
+  filter: blur(32px);
+  animation: proto-mist 10s ease-in-out infinite alternate;
+}
+.hero-cinematic .hero-atmosphere::after {
+  opacity: .3;
+  transform: translateY(20%);
+  animation-delay: -5s;
+}
+.hero-cinematic-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(270px, .9fr);
+  gap: clamp(1.5rem, 5vw, 5rem);
+  align-items: center;
+  max-width: 1200px;
+}
+.hero-cinematic .hero-copy { animation: proto-rise .85s ease-out both; }
+.hero-cinematic .eyebrow { color: #49d5ff; }
+.hero-cinematic h1 {
+  max-width: 740px;
+  font-size: clamp(3rem, 6vw, 5.6rem);
+  line-height: 1.05;
+  letter-spacing: -.055em;
+  text-wrap: balance;
+}
+.hero-cinematic .accent {
+  color: #35ceff;
+  text-shadow: 0 0 35px rgba(0, 180, 255, .3);
+}
+.hero-cinematic .lead {
+  max-width: 600px;
+  color: #c5d9ea;
+  font-size: clamp(1.06rem, 1.6vw, 1.25rem);
+}
+.hero-cinematic .btn.ghost {
+  color: #f2f9ff;
+  border-color: rgba(105, 203, 255, .45);
+  background: rgba(8, 28, 48, .48);
+}
+.hero-cinematic .hero-emblem {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 350px;
+  aspect-ratio: 1;
+  animation: proto-rise 1.1s .15s ease-out both;
+}
+.hero-cinematic .hero-emblem-halo {
+  position: absolute;
+  width: 80%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(27, 198, 255, .36), rgba(0, 115, 255, .12) 48%, transparent 72%);
+  filter: blur(30px);
+  animation: proto-glow 5s ease-in-out infinite alternate;
+}
+.hero-cinematic .hero-emblem img {
+  position: relative;
+  width: min(100%, 440px);
+  height: auto;
+  max-height: 440px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 18px rgba(24, 196, 255, .45)) drop-shadow(0 0 55px rgba(0, 132, 255, .22));
+}
+.hero-cinematic .hero-bottom-glow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, rgba(7, 27, 46, .6) 60%, var(--bg));
+}
+/* Der Hero bleibt auch bei aktivem Light Mode dunkel. */
+:root[data-theme="light"] .hero-cinematic .lead { color: #c5d9ea; }
+@keyframes proto-rise {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes proto-glow {
+  from { opacity: .65; transform: scale(.94); }
+  to { opacity: 1; transform: scale(1.08); }
+}
+@keyframes proto-mist {
+  from { transform: translate(-3%, 2%); }
+  to { transform: translate(3%, -2%); }
+}
+@media (max-width: 850px) {
+  .hero.hero-cinematic { min-height: auto; padding: 5rem 0 4rem; }
+  .hero-cinematic-inner { grid-template-columns: 1fr; gap: .5rem; text-align: center; }
+  .hero-cinematic .hero-copy { order: 1; }
+  .hero-cinematic .hero-emblem { order: 0; min-height: 220px; max-width: 310px; margin: 0 auto; }
+  .hero-cinematic .lead { margin-inline: auto; }
+  .hero-cinematic .actions { justify-content: center; }
+}
+@media (max-width: 650px) {
+  .hero.hero-cinematic { padding: 2.4rem 0 4rem; }
+  .hero-cinematic .hero-emblem { max-width: 225px; min-height: 205px; }
+  .hero-cinematic h1 { font-size: clamp(2.5rem, 11vw, 4rem); }
+  .hero-cinematic .eyebrow { font-size: .68rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-cinematic .hero-copy,
+  .hero-cinematic .hero-emblem,
+  .hero-cinematic .hero-emblem-halo,
+  .hero-cinematic .hero-atmosphere::before,
+  .hero-cinematic .hero-atmosphere::after { animation: none !important; }
+}
