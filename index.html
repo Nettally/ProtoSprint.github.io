@@ -47,7 +47,18 @@
 
       <nav id="nav" class="nav" aria-label="Hauptnavigation">
         <ul>
-          <li><a href="#leistungen">Leistungen</a></li>
+          <li>
+            <details class="services-dropdown">
+              <summary>Leistungen <span aria-hidden="true">⌄</span></summary>
+              <ul class="services-submenu">
+                  <li><a href="index.html#leistungen">Alle Leistungen</a></li>
+                  <li><a href="entwickeln-fertigen.html">🛠️ Entwickeln &amp; Fertigen</a></li>
+                  <li><a href="bedrucken-verschenken.html">🎁 Bedrucken &amp; Verschenken</a></li>
+                  <li><a href="bauen-begleiten.html">🚀 Beraten &amp; Begleiten</a></li>
+                  <li><a href="lernen-entdecken.html">💡 Lernen &amp; Entdecken</a></li>
+              </ul>
+            </details>
+          </li>
           <li><a href="#problem">Dein Projekt</a></li>
           <!--<li><a href="#workshops">Workshops</a></li>-->
           <li><a href="#ueber">Über ProtoSprint</a></li>
@@ -113,7 +124,7 @@
         </div>
 
         <div class="service-project-grid">
-          <article class="service-project-card">
+          <a class="service-project-card service-project-link" href="entwickeln-fertigen.html" aria-labelledby="entwickeln-fertigen-title">
      <!--       <img class="service-project-image" src="assets/projekt-lasercutting.jpg" alt="Beispiel einer individuell lasergravierten Holzscheibe" loading="lazy" decoding="async"> -->
            
 <div class="service-project-duo">
@@ -132,53 +143,63 @@
 </div>
 
             <div class="service-project-content">
-              <h3>🛠️ Entwickeln &amp; Fertigen</h3>
+              <h3 id="entwickeln-fertigen-title">🛠️ Entwickeln &amp; Fertigen</h3>
               <p>Individuelle Bauteile, Prototypen und kreative Sonderanfertigungen – von der ersten Skizze bis zum fertigen Stück.</p>
               <ul class="service-list">
                 <li>3D-Druck</li><li>Lasercutting</li><li>Konstruktion</li><li>Prototypenfertigung</li>
               </ul>
               <p class="project-example">Projektbeispiel: Individuelle Lasergravur &amp; 3D-Druck</p>
+              <span class="service-project-cta">Mehr erfahren <span aria-hidden="true">↗</span></span>
             </div>
-          </article>
+          </a>
 
-          <article class="service-project-card">
+          <a class="service-project-card service-project-link" href="bedrucken-verschenken.html" aria-labelledby="bedrucken-verschenken-title">
             <div class="service-project-duo">
               <img src="assets/projekt-honig.jpg" alt="Beispiel eines personalisierten Honigglases" loading="lazy" decoding="async">
               <img src="assets/projekt-textildruck.jpg" alt="Beispiel individuell bedruckter T-Shirts" loading="lazy" decoding="async">
             </div>
             <div class="service-project-content">
-              <h3>🎁 Bedrucken &amp; Verschenken</h3>
+              <h3 id="bedrucken-verschenken-title">🎁 Bedrucken &amp; Verschenken</h3>
               <p>Individuelle Produkte für Unternehmen, Vereine, Veranstaltungen und persönliche Geschenke.</p>
               <ul class="service-list">
                 <li>Textil- &amp; T-Shirt-Druck</li><li>Personalisierte Produkte</li><li>Honig-Geschenke</li><li>Kleine individuelle Serien</li>
               </ul>
               <p class="project-example">Projektbeispiele: Honigetiketten &amp; Textildruck</p>
+              <span class="service-project-cta">Mehr erfahren <span aria-hidden="true">↗</span></span>
             </div>
-          </article>
+          </a>
 
-          <article class="service-project-card">
-            <img class="service-project-image" src="assets/projekt-photovoltaik.jpg" alt="Photovoltaikmodule auf einem Hausdach" loading="lazy" decoding="async">
+          <a class="service-project-card service-project-link" href="bauen-begleiten.html" aria-labelledby="bauen-begleiten-title">
+            <div class="service-project-duo">
+              <img src="assets/projekt-photovoltaik.png" alt="Photovoltaikmodule auf einem Hausdach" loading="lazy" decoding="async">
+              <img src="assets/Beraten.png" alt="Gemeinsame technische Beratung und Projektplanung an einem Werkstatttisch" loading="lazy" decoding="async">
+            </div>
             <div class="service-project-content">
-              <h3>☀️ Bauen &amp; Begleiten</h3>
+              <h3 id="bauen-begleiten-title">🚀 Beraten &amp; Begleiten</h3>
               <p>Technische Begleitung und Dokumentation bei Bau-, Sanierungs- und Photovoltaikprojekten.</p>
               <ul class="service-list">
                 <li>Photovoltaik</li><li>Sanierung</li><li>Dokumentation</li><li>Technische Projektbegleitung</li>
               </ul>
               <p class="project-example">Projektbeispiel: Photovoltaik in der Praxis</p>
+              <span class="service-project-cta">Mehr erfahren <span aria-hidden="true">↗</span></span>
             </div>
-          </article>
+          </a>
 
-          <article class="service-project-card">
-            <img class="service-project-image" src="assets/projekt-technik-entdecken.jpg" alt="Illustratives Beispiel: spielerisches Entdecken von Technik an einem Spielzeugauto" loading="lazy" decoding="async">
+          <a class="service-project-card service-project-link" href="lernen-entdecken.html" aria-labelledby="lernen-entdecken-title">
+            <div class="service-project-duo">
+              <img src="assets/projekt-technik-entdecken.jpg" alt="Illustratives Beispiel: spielerisches Entdecken von Technik an einem Spielzeugauto" loading="lazy" decoding="async">
+              <img src="assets/Kinder.jpg" alt="Kinder bauen gemeinsam mit einer Betreuerin einen Greifarm aus Pappe" loading="lazy" decoding="async">
+            </div>
             <div class="service-project-content">
-              <h3>💡 Lernen &amp; Entdecken</h3>
+              <h3 id="lernen-entdecken-title">💡 Lernen &amp; Entdecken</h3>
               <p>Technik spielerisch erleben, Ideen entwickeln und gemeinsam Neues ausprobieren.</p>
               <ul class="service-list">
                 <li>Technik für Kinder (3–6 Jahre)</li><li>Papier-Prototyping</li><li>Kreativworkshops</li><li>Teambuilding</li>
               </ul>
               <p class="project-example">Projektbeispiel: Technik gemeinsam entdecken</p>
+              <span class="service-project-cta">Mehr erfahren <span aria-hidden="true">↗</span></span>
             </div>
-          </article>
+          </a>
         </div>
       </div>
     </section>
